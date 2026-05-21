@@ -1,9 +1,13 @@
 Identifier: eos9bpi
 Slug: antimicrobial-activity-enterobacter
 Status: In progress
-Title: Antimicrobial activity prediction against Enterobacter spp. from public ChEMBL data
-Description: >
-  Bioactivity prediction of growth inhibition in Enterobacter spp., trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to dose-response (MIC) assays. A ranking score is provided for each model alongside a combined consensus score.
+Title: Antimicrobial activity prediction against Enterobacter spp. from public 
+  ChEMBL data
+Description: Bioactivity prediction of growth inhibition in Enterobacter spp., 
+  trained as binary (active/inactive) classifiers from publicly available data 
+  in ChEMBL. Independent models are trained on multiple bioactivity datasets, 
+  corresponding to dose-response (MIC) assays. A ranking score is provided for 
+  each model alongside a combined consensus score.
 Deployment:
   - Local
   - Online
@@ -18,7 +22,8 @@ Output:
   - Score
 Output Dimension: 7
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Enterobacter spp from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+Interpretation: Probability of antimicrobial activity against Enterobacter spp 
+  from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 Tag:
   - Gram-negative bacteria
   - Antimicrobial activity
@@ -33,3 +38,4 @@ Publication: https://github.com/ersilia-os/chembl-antimicrobial-models
 Source Code: https://github.com/ersilia-os/chembl-antimicrobial-models
 License: GPL-3.0-or-later
 Contributor: arnaucoma24
+Incorporation Date: '2026-05-19'
