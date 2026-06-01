@@ -10,7 +10,6 @@ Description: Bioactivity prediction of growth inhibition in Enterobacter spp.,
   each model alongside a combined consensus score.
 Deployment:
   - Local
-  - Online
 Source: Local
 Source Type: Internal
 Task: Annotation
@@ -20,10 +19,9 @@ Input:
 Input Dimension: 1
 Output:
   - Score
-Output Dimension: 7
+Output Dimension: 8
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Enterobacter spp 
-  from 6 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+Interpretation: Probability of antimicrobial activity against Enterobacter spp from 7 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 Tag:
   - Gram-negative bacteria
   - Antimicrobial activity
