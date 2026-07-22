@@ -1,4 +1,4 @@
-consensus_score,merged_mic_decoys_b,merged_mic_decoys_a,merged_mic_decoys_d,merged_mic_decoys_c,general_dose_response,general_mic,general_mic90_decoys
-0.8734,0.9054,0.558,0.8068,0.9,0.7467,0.6721,0.7637
-0.5704,0.4652,0.4278,0.6317,0.4407,0.6941,0.6794,0.3724
-0.49,0.1756,0.526,0.4357,0.4774,0.6955,0.6643,0.4264
+consensus_score,chembl_single_point_0,chembl_dose_response_0,chembl_dose_response_1,chembl_dose_response_2,chembl_dose_response_3
+0.6398,0.8051,0.4123,0.7209,0.6509,0.3919
+0.3576,0.7312,0.2037,0.4494,0.3306,0.3455
+0.4309,0.7007,0.2612,0.5097,0.4165,0.4287
