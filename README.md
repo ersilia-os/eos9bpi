@@ -2,7 +2,7 @@
 
 Bioactivity prediction of growth inhibition in Enterobacter spp., trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (ACTIVITY) and dose-response (MIC) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-19.Last packaged on 2026-06-02.
+This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
 ## Information
 ### Identifiers
@@ -46,12 +46,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `47`
 - **Environment Size (Mb):** `7208`
-- **Image Size (Mb):** `2080.77`
+- **Image Size (Mb):** `7257.47`
 
 **Computational Performance (seconds):**
-- 10 inputs: `41.37`
-- 100 inputs: `39.87`
-- 10000 inputs: `746.27`
+- 10 inputs: `52.97`
+- 100 inputs: `38.7`
+- 10000 inputs: `970.09`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chembl-antimicrobial-models](https://github.com/ersilia-os/chembl-antimicrobial-models)
