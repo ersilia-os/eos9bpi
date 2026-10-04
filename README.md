@@ -1,6 +1,6 @@
 # Antimicrobial activity prediction against Enterobacter spp. from public ChEMBL data
 
-Bioactivity prediction of growth inhibition in Enterobacter spp., trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (ACTIVITY) and dose-response (MIC) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
+Predicts growth inhibition of Enterobacter species, Gram-negative opportunists that carry inducible beta-lactamases and readily acquire further resistance in hospital settings. Five classifiers were trained over the ChEMBL assay pools with sufficient supporting data and merged into a quality-weighted consensus. Coverage is thinner than for Escherichia coli or Klebsiella, so the panel is smaller and individual sub-models rest on fewer compounds.
 
 This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of antimicrobial activity against Enterobacter spp. from 5 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+- **Interpretation:** Probability of Enterobacter growth inhibition across five sub-models, plus a weighted consensus.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
