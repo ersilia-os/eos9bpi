@@ -1,6 +1,6 @@
 # Antimicrobial activity prediction against Enterobacter spp. from public ChEMBL data
 
-Predicts growth inhibition of Enterobacter species, Gram-negative opportunists that carry inducible beta-lactamases and readily acquire further resistance in hospital settings. Five classifiers were trained over the ChEMBL assay pools with sufficient supporting data and merged into a quality-weighted consensus. Coverage is thinner than for Escherichia coli or Klebsiella, so the panel is smaller and individual sub-models rest on fewer compounds.
+Bioactivity prediction of growth inhibition in Enterobacter spp., trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (ACTIVITY) and dose-response (MIC) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
 This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 
@@ -23,17 +23,17 @@ This model was incorporated on 2026-05-19.Last packaged on 2026-07-22.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of Enterobacter growth inhibition across five sub-models, plus a weighted consensus.
+- **Interpretation:** Probability of antimicrobial activity against Enterobacter spp. from 5 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 5 sub-models. Recommended threshold: 0.637. |
-| chembl_single_point_0 | float | high | Probability from sub-model trained on ChEMBL single-point low-data catch-all pool of 39 assays (191 compounds). Recommended threshold: 0.705. |
-| chembl_dose_response_0 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 77 assays (1284 compounds). Recommended threshold: 0.498. |
-| chembl_dose_response_1 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 111 assays (1281 compounds). Recommended threshold: 0.699. |
-| chembl_dose_response_2 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 67 assays (634 compounds; incl. 132 added negatives). Recommended threshold: 0.563. |
-| chembl_dose_response_3 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 65 assays (492 compounds; incl. 91 added negatives). Recommended threshold: 0.51. |
+| consensus_score | float | high | Quality-weighted consensus across the 5 sub-models on the same rank scale as the sub-models. Calibrated against a reference library of 50K drug-like molecules so that a score of 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| chembl_single_point_0 | float | high | Probability from sub-model trained on ChEMBL single-point low-data catch-all pool of 39 assays (191 compounds). Recommended threshold: 0.65. |
+| chembl_dose_response_0 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 77 assays (1284 compounds). Recommended threshold: 0.65. |
+| chembl_dose_response_1 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 111 assays (1281 compounds). Recommended threshold: 0.65. |
+| chembl_dose_response_2 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 67 assays (634 compounds; incl. 132 added negatives). Recommended threshold: 0.65. |
+| chembl_dose_response_3 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 65 assays (492 compounds; incl. 91 added negatives). Recommended threshold: 0.65. |
 
 
 ### Source and Deployment
