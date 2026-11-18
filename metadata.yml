@@ -46,7 +46,7 @@ DockerHub: https://hub.docker.com/r/ersiliaos/eos9bpi
 Docker Architecture:
   - AMD64
   - ARM64
-Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos9bpi_v5.sif
+Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos9bpi_v4.sif
 Model Size: 68.0
 Environment Size: 7923.0
 Image Size: 3919.91
